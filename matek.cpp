@@ -12,6 +12,7 @@ int main()
     int max;
     int szam =100;
     int maxszam;
+    int koztesszam =0;
     cout << "Add meg k értékét:" << endl;
     cin >> k;
 
@@ -34,18 +35,23 @@ int main()
 
         }
         if (maxtemp>=max) {
+            koztesszam++;
+            if (maxtemp>max) {
+                koztesszam= 1;
+            }
             max =maxtemp;
             maxszam = ideiglenes;
-            cout <<"Új  érték találva ennél a számnál:"<< ideiglenes <<" Ennyi:" <<max<< endl;
+            //cout <<"Új  érték találva ennél a számnál:"<< ideiglenes <<" Ennyi:" <<max<< endl;
+            /*lehet engedélyezni debughoz , ellenőrizni de txtben ott van minden*/
             output << "Új hosszabb érték találva ennél a számnál:"<<" Ennyi:" <<max<< endl;
         }
         szam =ideiglenes;
         }
 
-    cout <<  " a leghosszab sor hossza: "<< max << endl;
-    output << " a leghosszab sor hossza: "<< max << endl;
+    cout <<  " A leghosszab sor hossza  "<< max <<" volt ami:"<< koztesszam<<" szám esetében fordul elő! "<< endl;
+    output << " A leghosszab sor hossza  "<< max <<" volt ami:"<< koztesszam<<" szám esetében fordul elő! "<< endl;
 
-    cout << " ennél a számnál: " << maxszam  << endl;
-    output << " ennél a számnál: " << maxszam  << endl;
+    cout << " Ennél a számnál: " << maxszam  << endl;
+    output << " Ennél a számnál: " << maxszam  << endl;
     return 0;
 }
