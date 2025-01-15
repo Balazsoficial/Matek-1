@@ -3,55 +3,57 @@
 //
 #include <iostream>
 #include <fstream>
+#include <windows.h>
 using namespace ::std;
 int main()
 {
     ofstream output("./output.txt");
     int k;
-    int maxtemp;
-    int max;
-    int szam =100;
-    int maxszam;
-    int koztesszam =0;
+    int JelenlegiCiklusMuveleteinekMennyisege;
+    int LegtobbVeghezvittMuveletEgyCiklusban;
+    int SzamAmiHaromJegyu =100;
+    int LegnagyobbEloforduloSzamAmireIgaz;
+    int HanyszorFordultEloAJelenlegiMaximalisSzam =0;
+    SetConsoleOutputCP(CP_UTF8);
     cout << "Add meg k értékét:" << endl;
     cin >> k;
 
-    for (szam; szam < 1000; szam++)
+    for (SzamAmiHaromJegyu; SzamAmiHaromJegyu < 1000; SzamAmiHaromJegyu++)
         {
-        maxtemp =0;
-        int ideiglenes =szam;
-        for (szam; szam >0; szam) {
+        JelenlegiCiklusMuveleteinekMennyisege =0;
+        int ideiglenes =SzamAmiHaromJegyu;
+        for (SzamAmiHaromJegyu; SzamAmiHaromJegyu >0; SzamAmiHaromJegyu) {
 
 
 
-            int egyes = szam % 10;
-            int tizes = szam/10 % 10;
-            int szazas = szam/100 % 10;
+            int egyes = SzamAmiHaromJegyu % 10;
+            int tizes = SzamAmiHaromJegyu/10 % 10;
+            int szazas = SzamAmiHaromJegyu/100 % 10;
             int osszeg = egyes + tizes + szazas;
-            szam = szam -(osszeg*k);
-            output <<"Szam: "<< szam << endl;
-            maxtemp++;
+            SzamAmiHaromJegyu = SzamAmiHaromJegyu -(osszeg*k);
+            output <<"Szam: "<< SzamAmiHaromJegyu << endl;
+            JelenlegiCiklusMuveleteinekMennyisege++;
 
 
         }
-        if (maxtemp>=max) {
-            koztesszam++;
-            if (maxtemp>max) {
-                koztesszam= 1;
+        if (JelenlegiCiklusMuveleteinekMennyisege>=LegtobbVeghezvittMuveletEgyCiklusban) {
+            HanyszorFordultEloAJelenlegiMaximalisSzam++;
+            if (JelenlegiCiklusMuveleteinekMennyisege>LegtobbVeghezvittMuveletEgyCiklusban) {
+                HanyszorFordultEloAJelenlegiMaximalisSzam= 1;
             }
-            max =maxtemp;
-            maxszam = ideiglenes;
+            LegtobbVeghezvittMuveletEgyCiklusban =JelenlegiCiklusMuveleteinekMennyisege;
+            LegnagyobbEloforduloSzamAmireIgaz = ideiglenes;
             //cout <<"Új  érték találva ennél a számnál:"<< ideiglenes <<" Ennyi:" <<max<< endl;
             /*lehet engedélyezni debughoz , ellenőrizni de txtben ott van minden*/
-            output << "Új hosszabb érték találva ennél a számnál:"<<" Ennyi:" <<max<< endl;
+            output << "Új hosszabb érték találva ennél a számnál:"<<" Ennyi:" <<LegtobbVeghezvittMuveletEgyCiklusban<< endl;
         }
-        szam =ideiglenes;
+        SzamAmiHaromJegyu =ideiglenes;
         }
 
-    cout <<  " A leghosszab sor hossza  "<< max <<" volt ami:"<< koztesszam<<" szám esetében fordul elő! "<< endl;
-    output << " A leghosszab sor hossza  "<< max <<" volt ami:"<< koztesszam<<" szám esetében fordul elő! "<< endl;
+    cout <<  " A leghosszab sor hossza  "<< LegtobbVeghezvittMuveletEgyCiklusban <<" volt ami:"<< HanyszorFordultEloAJelenlegiMaximalisSzam<<" szám esetében fordul elő! "<< endl;
+    output << " A leghosszab sor hossza  "<< LegtobbVeghezvittMuveletEgyCiklusban <<" volt ami:"<< HanyszorFordultEloAJelenlegiMaximalisSzam<<" szám esetében fordul elő! "<< endl;
 
-    cout << " Ennél a számnál: " << maxszam  << endl;
-    output << " Ennél a számnál: " << maxszam  << endl;
+    cout << " Ennél a számnál: " << LegnagyobbEloforduloSzamAmireIgaz  << endl;
+    output << " Ennél a számnál: " << LegnagyobbEloforduloSzamAmireIgaz  << endl;
     return 0;
 }
