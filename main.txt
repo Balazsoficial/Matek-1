@@ -1,0 +1,4 @@
+100-999-ig a számok és k bekérése.
+szám -(számj összeg x k)
+melyik kra max?
+és mennyi lépés kell hozzá (melyik számnál)
