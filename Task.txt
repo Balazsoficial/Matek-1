@@ -4,4 +4,4 @@ melyik kra max?
 és mennyi lépés kell hozzá (melyik számnál)
 
 V2
-nem kell logolás,írja ki hogy az a szám amelyik a legnagyobb volt hányszor fordul elő!
+nem kell logolás,írja ki hogy a szám amelyik a legnagyobb volt hányszor fordul elő!
