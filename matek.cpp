@@ -31,7 +31,7 @@ int main()
             int szazas = SzamAmiHaromJegyu/100 % 10;
             int osszeg = egyes + tizes + szazas;
             SzamAmiHaromJegyu = SzamAmiHaromJegyu -(osszeg*k);
-            output <<"Szam: "<< SzamAmiHaromJegyu << endl;
+          //  output <<"Szam: "<< SzamAmiHaromJegyu << endl;
             JelenlegiCiklusMuveleteinekMennyisege++;
 
 
@@ -45,7 +45,7 @@ int main()
             LegnagyobbEloforduloSzamAmireIgaz = ideiglenes;
             //cout <<"Új  érték találva ennél a számnál:"<< ideiglenes <<" Ennyi:" <<max<< endl;
             /*lehet engedélyezni debughoz , ellenőrizni de txtben ott van minden*/
-            output << "Új hosszabb érték találva ennél a számnál:"<<" Ennyi:" <<LegtobbVeghezvittMuveletEgyCiklusban<< endl;
+            output << "Új hosszabb érték találva ennél a számnál: "<< ideiglenes<<" Ennyi:" <<LegtobbVeghezvittMuveletEgyCiklusban<< endl;
         }
         SzamAmiHaromJegyu =ideiglenes;
         }
