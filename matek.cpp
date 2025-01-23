@@ -44,7 +44,7 @@ int main()
             LegtobbVeghezvittMuveletEgyCiklusban =JelenlegiCiklusMuveleteinekMennyisege;
             LegnagyobbEloforduloSzamAmireIgaz = ideiglenes;
             //cout <<"Új  érték találva ennél a számnál:"<< ideiglenes <<" Ennyi:" <<max<< endl;
-            /*lehet engedélyezni debughoz , ellenőrizni de txtben ott van minden*/
+            /*lehet engedélyezni debughoz, ellenőrizni de txtben ott van minden*/
             output << "Új hosszabb érték találva ennél a számnál: "<< ideiglenes<<" Ennyi:" <<LegtobbVeghezvittMuveletEgyCiklusban<< endl;
         }
         SzamAmiHaromJegyu =ideiglenes;
